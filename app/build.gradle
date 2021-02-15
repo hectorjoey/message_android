@@ -57,4 +57,5 @@ dependencies {
 
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
 }

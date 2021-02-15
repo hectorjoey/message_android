@@ -10,7 +10,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private static final String BASE_URL = "https://localhost:8080/";
+    private static final String BASE_URL = "https://fhi360-message-service.herokuapp.com/api/v1/";
     private static hector.developers.birthdaywishes.api.RetrofitClient mInstance;
     private Retrofit retrofit;
 

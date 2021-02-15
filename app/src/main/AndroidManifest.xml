@@ -13,11 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BirthdayWishes">
-        <activity android:name=".activities.StaffActivity" />
+        <activity android:name=".activities.SplashActivity" />
         <activity android:name=".activities.DetailActivity" />
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.SplashActivity">
+        <activity android:name=".activities.StaffActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
