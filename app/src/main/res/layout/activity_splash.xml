@@ -9,11 +9,11 @@
 
     <ImageView
         android:id="@+id/birth_image"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:src="@drawable/birth" />
+        android:layout_marginTop="120dp"
+        android:src="@drawable/best" />
 
     <LinearLayout
         android:layout_width="match_parent"

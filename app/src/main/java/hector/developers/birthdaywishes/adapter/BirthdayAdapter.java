@@ -19,25 +19,25 @@ import hector.developers.birthdaywishes.R;
 import hector.developers.birthdaywishes.activities.BirthDetailActivity;
 import hector.developers.birthdaywishes.model.Staff;
 
+public class BirthdayAdapter extends RecyclerView.Adapter<BirthdayAdapter.ViewHolder>{
 
-public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> {
     Context context;
     List<Staff> staffList;
 
-    public StaffAdapter(List<Staff> staffList, Context context) {
+    public BirthdayAdapter(List<Staff> staffList, Context context) {
         this.staffList = staffList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BirthdayAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.stafflist, parent, false);
-        return new ViewHolder(v);
+        return new BirthdayAdapter.ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BirthdayAdapter.ViewHolder holder, int position) {
         Staff staff = staffList.get(position);
         holder.tvFirstName.setText(staff.getFirstname());
         holder.tvEmail.setText(staff.getEmail());

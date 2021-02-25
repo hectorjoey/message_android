@@ -22,7 +22,7 @@
             <ImageView
                 android:id="@+id/img2"
                 android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_height="81dp"
                 android:background="#819282"
                 android:padding="5dp"
                 android:src="@drawable/img"
@@ -64,31 +64,57 @@
                         android:textSize="12sp" />
                 </LinearLayout>
 
-<!--                <LinearLayout-->
-<!--                    android:id="@+id/layout_userType"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="8dp"-->
-<!--                    android:layout_marginRight="8dp"-->
-<!--                    android:orientation="horizontal"-->
-<!--                    android:padding="2dp">-->
+                <LinearLayout
+                    android:id="@+id/layout_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/vUserType"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:text="User Type :"-->
-<!--                        android:textColor="#4cbbb9"-->
-<!--                        android:textSize="12sp" />-->
+                    <TextView
+                        android:id="@+id/vDob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Birthday:"
+                        android:textColor="#4cbbb9"
+                        android:textSize="12sp" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/tvUserType"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_weight="1"-->
-<!--                        android:textSize="12sp" />-->
-<!--                </LinearLayout>-->
+                    <TextView
+                        android:id="@+id/tvDob"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_doe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/vDoe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Date of Employment:"
+                        android:textColor="#4cbbb9"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvDoe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
 
                 <LinearLayout

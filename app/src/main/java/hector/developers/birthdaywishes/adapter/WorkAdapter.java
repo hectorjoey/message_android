@@ -17,27 +17,27 @@ import java.util.List;
 
 import hector.developers.birthdaywishes.R;
 import hector.developers.birthdaywishes.activities.BirthDetailActivity;
+import hector.developers.birthdaywishes.activities.WorkDetailActivity;
 import hector.developers.birthdaywishes.model.Staff;
 
-
-public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> {
+public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.ViewHolder> {
     Context context;
     List<Staff> staffList;
 
-    public StaffAdapter(List<Staff> staffList, Context context) {
+    public WorkAdapter(List<Staff> staffList, Context context) {
         this.staffList = staffList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public WorkAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.stafflist, parent, false);
-        return new ViewHolder(v);
+        return new WorkAdapter.ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull WorkAdapter.ViewHolder holder, int position) {
         Staff staff = staffList.get(position);
         holder.tvFirstName.setText(staff.getFirstname());
         holder.tvEmail.setText(staff.getEmail());
@@ -53,7 +53,7 @@ public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BirthDetailActivity.class);
+                Intent intent = new Intent(context, WorkDetailActivity.class);
                 intent.putExtra("key", staff);
                 context.startActivity(intent);
             }
@@ -81,5 +81,6 @@ public class StaffAdapter extends RecyclerView.Adapter<StaffAdapter.ViewHolder> 
             tvDoe = itemView.findViewById(R.id.tvDoe);
             cardView = itemView.findViewById(R.id.cardView);
         }
+
     }
 }

@@ -36,12 +36,16 @@ public class Staff implements Serializable {
     @Expose
     private String phone;
 
+    @SerializedName("designation")
+    @Expose
+    private String designation;
+
 
     public Staff() {
     }
 
     public Staff(Long id, String firstname, String lastname, String dateOfBirth, String gender,  String email,
-                 String phone, String employmentDate) {
+                 String phone, String employmentDate, String designation) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -50,6 +54,7 @@ public class Staff implements Serializable {
         this.email = email;
         this.phone = phone;
         this.gender = gender;
+        this.designation = designation;
     }
 
     public Long getId() {
@@ -114,5 +119,13 @@ public class Staff implements Serializable {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
     }
 }

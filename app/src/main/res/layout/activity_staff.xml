@@ -13,23 +13,16 @@
         android:layout_marginBottom="12dp"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginTop="22dp"
-            android:gravity="center"
-            android:src="@drawable/birthday" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:background="#EE8147"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             android:text="Add Staff"
             android:textColor="#000000"
-            android:textSize="15sp"
+            android:textSize="25sp"
             android:textStyle="bold" />
 
         <!--firstname-->
@@ -45,9 +38,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="14dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/et_custom"
                 android:hint="First Name"
                 android:importantForAutofill="no"
                 android:inputType="textCapWords"
@@ -68,6 +61,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/et_custom"
                 android:hint="Last name"
                 android:importantForAutofill="no"
                 android:inputType="textCapWords"
@@ -79,6 +73,40 @@
             android:layout_height="0.5dp"
             android:background="#c0c0c0" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/et_custom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="4dp"
+                    android:text="Select Gender"
+                    android:textColor="#f76a8c"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="8dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- date of birth-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/date"
             android:layout_width="match_parent"
@@ -86,26 +114,28 @@
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_date"
+                android:id="@+id/dateOfBirth"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/et_custom"
                 android:clickable="true"
-                android:focusable="true"
-                android:hint="Select Date"
+                android:focusable="false"
+                android:hint="Select Date of Birth"
                 android:inputType="date"
                 android:padding="4dp"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-
         </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="#c0c0c0" />
+
+
         <!--email-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textEmail"
@@ -121,6 +151,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/et_custom"
                 android:hint="Email"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
@@ -128,7 +159,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <!--        phone label-->
+        <!--  phone label-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textPhone"
             android:layout_width="match_parent"
@@ -143,12 +174,42 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/et_custom"
                 android:hint="Phone"
                 android:inputType="number"
                 android:padding="6dp"
                 android:textAllCaps="true" />
         </com.google.android.material.textfield.TextInputLayout>
+        <!--date of employment-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/doEmployment"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/et_custom"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Select Date of Employment"
+                android:inputType="date"
+                android:padding="4dp"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#c0c0c0" />
+
+        <!-- designation-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textDesignation"
             android:layout_width="match_parent"
@@ -163,44 +224,23 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="8dp"
+                android:background="@drawable/et_custom"
                 android:hint="Designation"
                 android:inputType="textCapWords"
                 android:padding="6dp"
                 android:textAllCaps="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:fontFamily="sans-serif-condensed"
-            android:padding="4dp"
-            android:text="Date of Employment"
-            android:textColor="#f76a8c"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
-        <!--                <Spinner-->
-        <!--                    android:id="@+id/age_spinner"-->
-        <!--                    android:layout_width="200dp"-->
-        <!--                    android:layout_height="50dp"-->
-        <!--                    android:layout_marginLeft="20dp"-->
-        <!--                    android:layout_marginRight="20dp"-->
-        <!--                    android:layout_marginBottom="8dp"-->
-        <!--                    />-->
-
-
-        <!-- Signup Button -->
+        <!-- save Button -->
         <Button
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnSave"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="40dp"
             android:background="@drawable/registration_button"
-            android:text="Register"
+            android:text="Save"
             android:textAllCaps="false" />
     </LinearLayout>
 </ScrollView>

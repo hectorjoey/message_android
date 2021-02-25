@@ -16,15 +16,16 @@ public interface Api {
 
     @Headers({"Accept: application/json"})
     @FormUrlEncoded
-    @POST("users")
+    @POST("staff")
     Call<Staff> createStaff(
             @Field("firstname") String firstname,
             @Field("lastname") String lastname,
-            @Field("employmentDate") String employmentDate,
+            @Field("gender") String gender,
             @Field("dateOfBirth") String dateOfBirth,
+            @Field("employmentDate") String employmentDate,
             @Field("phone") String phone,
             @Field("email") String email,
-            @Field("gender") String gender);
+            @Field("designation") String designation);
 
 
     //the users login call
@@ -45,11 +46,11 @@ public interface Api {
     Call<List<User>> getUsers();
 
     //fetching all staffs
-    @GET("users")
+    @GET("staffs")
     Call<List<Staff>> getStaffs();
 
 
-//    @GET("userHealthdata/{userId}")
-//    Call<List<UserHealthData>> getUserHealthDataBySupervisorId(@Path("userId") String userId);
+    @GET("staff/{dateOfBirth}")
+    Call<List<Staff>> findByDateOfBirth(@Path("dateOfBirth") String dateOfBirth);
 
 }
