@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import hector.developers.birthdaywishes.R;
+
 public class BirthdayActivity extends AppCompatActivity {
 
     @Override
